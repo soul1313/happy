@@ -1,0 +1,196 @@
+/* Основные стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #ff5733;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+}
+
+/* Карточки с пожеланиями */
+.card-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 1.2em;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для всплывающего сообщения */
+.gift-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gift-icon {
+    font-size: 3em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gift-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Стили для всплывающего окна с вопросом */
+.gift-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+    display: none;
+    animation: fadeInMessage 0.5s ease-in-out;
+}
+
+@keyframes fadeInMessage {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для игры */
+.game {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#gameMessage {
+    color: red;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#userInput {
+    padding: 10px;
+    font-size: 1em;
+    width: 150px;
+    margin-right: 10px;
+}
+
+#submitGuess {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ff5733;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submitGuess:hover {
+    background-color: #e84e29;
+}
+
+#message {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #f0f0f0;
+}
+
+#attempts {
+    font-weight: bold;
+}
+
+/* Стили для кнопки перезапуска */
+.restart-btn {
+    background-color: #ff5733;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.restart-btn:hover {
+    background-color: #e84e29;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #userInput {
+        width: 100%;
+    }
+
+    #submitGuess {
+        width: 100%;
+    }
+
+    #gameMessage {
+        font-size: 1.3em;
+    }
+
+    .snowflake {
+        font-size: 20px;
+    }
+
+    #attempts {
+        font-size: 1.3em;
+    }
+
+    #restartGame {
+        width: 100%;
+        font-size: 1.2em;
+        padding: 15px;
+    }
+}

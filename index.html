@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подарок для Тимура</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>С Днем Рождения, Тимур!</h1>
+        </header>
+
+        <!-- Иконка подарка -->
+        <div id="giftContainer" class="gift-container">
+            <div id="giftIcon" class="gift-icon">
+                🎁
+            </div>
+        </div>
+
+        <!-- Всплывающее окно с вопросом -->
+        <div id="giftMessage" class="gift-message">
+            <p>Тимур, а что ты подаришь Амиру на Новый год?</p>
+        </div>
+
+        <section class="card-section">
+            <!-- Первая карточка -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4tQi6UuOviQ1ZlsHyAVyllEspVATjiNGbVA&s" alt="Описание картинки" style="width: 100%; max-width: 500px;">
+                <p>ТЫ САМЫЙ ЛУЧШИЙ БРАТ!!!</p>
+            </div>
+            <!-- Вторая карточка -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4tQi6UuOviQ1ZlsHyAVyllEspVATjiNGbVA&s" alt="Описание картинки" style="width: 100%; max-width: 500px;">
+                <p>Желаю тебе: счастья, здоровья, пусть всё в жизни будет ОТЛИЧНО!</p>
+            </div>
+            <!-- Третья карточка -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4tQi6UuOviQ1ZlsHyAVyllEspVATjiNGbVA&s" alt="Описание картинки" style="width: 100%; max-width: 500px;">
+                <p>Желаю тебе, чтобы в твой день сбудутся все твои мечты!</p>
+            </div>
+            <!-- Четвертая карточка -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4tQi6UuOviQ1ZlsHyAVyllEspVATjiNGbVA&s" alt="Описание картинки" style="width: 100%; max-width: 500px;">
+                <p>Брат, желаю тебе всегда оставаться сильным и уверенным в себе!</p>
+            </div>
+            <!-- Пятая карточка -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4tQi6UuOviQ1ZlsHyAVyllEspVATjiNGbVA&s" alt="Описание картинки" style="width: 100%; max-width: 500px;">
+                <p>С каждым годом ты становишься только лучше, брат! Пусть счастье будет с тобой всегда!</p>
+            </div>
+            <!-- Шестая карточка -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4tQi6UuOviQ1ZlsHyAVyllEspVATjiNGbVA&s" alt="Описание картинки" style="width: 100%; max-width: 500px;">
+                <p>С днем рождения, брат! Пусть удача всегда будет на твоей стороне!</p>
+            </div>
+            <!-- Седьмая карточка -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4tQi6UuOviQ1ZlsHyAVyllEspVATjiNGbVA&s" alt="Описание картинки" style="width: 100%; max-width: 500px;">
+                <p>Желаю здоровья, счастья и множества ярких моментов в жизни!</p>
+            </div>
+        </section>
+
+        <h1 style="color: red;">Так, ну а теперь сыграем в игру "Угадай число"!</h1>
+
+        <!-- Игровая форма -->
+        <div class="game">
+            <p id="gameMessage">Амир загадал число от 1 до 100. Попробуй угадать! Угадаешь Ты Амиру Приз,не угадаешь,Ты Амиру приз!</p>
+            <input type="number" id="userInput" placeholder="Введите число" min="1" max="100">
+            <button id="submitGuess">Проверить</button>
+            <p id="message"></p>
+            <p>Попыток: <span id="attempts">0</span></p>
+        </div>
+
+        <button id="restartGame" class="restart-btn" style="display: none;">Сыграть снова</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
